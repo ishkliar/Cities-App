@@ -35,6 +35,7 @@ class VisitorListViewController: UIViewController, StoryboardInstantiatable {
 
     private func setupUI() {
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self)
     }
 
     @objc func dismissAction() {
@@ -49,7 +50,7 @@ extension VisitorListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = viewModel.visitors[indexPath.row]
-        let cell = UITableViewCell()
+        let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         cell.textLabel?.text = item.fullName
 
         return cell
