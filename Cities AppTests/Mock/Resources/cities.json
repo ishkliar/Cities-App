@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "Test city 1",
+        "image": "http://lorempixel.com/640/480/animals",
+        "country": "Test coutry 1"
+    },
+    {
+        "id": "2",
+        "name": "Test city 2",
+        "image": "http://lorempixel.com/640/480/people",
+        "country": "Test coutry 2"
+    },
+    {
+        "id": "3",
+        "name": "Test city 3",
+        "image": "http://lorempixel.com/640/480/business",
+        "country": "Test coutry 3"
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+      "id": "1",
+      "cityId": "1",
+      "fullName": "Test full name 1"
+    },
+    {
+      "id": "2",
+      "cityId": "2",
+      "fullName": "Test full name 2"
+    },
+    {
+      "id": "3",
+      "cityId": "3",
+      "fullName": "Test full name 3"
+    }
+]

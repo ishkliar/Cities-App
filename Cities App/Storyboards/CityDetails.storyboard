@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City Details View Controller-->
+        <scene sceneID="IPl-k4-3TJ">
+            <objects>
+                <viewController storyboardIdentifier="CityDetailsViewController" id="A7f-7K-FOb" customClass="CityDetailsViewController" customModule="Cities_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wxM-Vi-RBp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking: 20/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sun-sX-ZoO">
+                                <rect key="frame" x="210" y="60" width="188" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pcU-vX-Fvb">
+                                <rect key="frame" x="0.0" y="108" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="EgC-Ov-ASz"/>
+                                </constraints>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjg-Ch-uSm">
+                                <rect key="frame" x="149" y="274" width="116" height="30"/>
+                                <state key="normal" title="Show visitors (9)"/>
+                                <connections>
+                                    <action selector="showVisitorsAction" destination="A7f-7K-FOb" eventType="touchUpInside" id="dtN-Pm-sSp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sun-sX-ZoO" firstAttribute="top" secondItem="7Kk-DS-jih" secondAttribute="top" constant="16" id="5pA-cn-Qwv"/>
+                            <constraint firstItem="7Kk-DS-jih" firstAttribute="trailing" secondItem="pcU-vX-Fvb" secondAttribute="trailing" id="8kI-we-cTv"/>
+                            <constraint firstItem="Fjg-Ch-uSm" firstAttribute="top" secondItem="pcU-vX-Fvb" secondAttribute="bottom" constant="16" id="VaA-Rv-vCJ"/>
+                            <constraint firstItem="pcU-vX-Fvb" firstAttribute="top" secondItem="sun-sX-ZoO" secondAttribute="bottom" constant="16" id="f4F-SC-qCU"/>
+                            <constraint firstItem="Fjg-Ch-uSm" firstAttribute="centerX" secondItem="wxM-Vi-RBp" secondAttribute="centerX" id="gaD-Qu-qEf"/>
+                            <constraint firstAttribute="trailing" secondItem="sun-sX-ZoO" secondAttribute="trailing" constant="16" id="j8p-1T-Ly6"/>
+                            <constraint firstItem="pcU-vX-Fvb" firstAttribute="leading" secondItem="7Kk-DS-jih" secondAttribute="leading" id="wby-CO-Ymy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Kk-DS-jih"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="pcU-vX-Fvb" id="Js1-2p-GWn"/>
+                        <outlet property="ratingLabel" destination="sun-sX-ZoO" id="quQ-xX-MX7"/>
+                        <outlet property="showVisitorsButton" destination="Fjg-Ch-uSm" id="i6P-04-NQx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ig-rT-QCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="-245"/>
+        </scene>
+    </scenes>
+</document>
