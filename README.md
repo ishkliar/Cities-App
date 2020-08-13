@@ -1,3 +1,3 @@
 # Cities-App
 
-This is an example project demonstrating MVVM architecture pattern.
+This is an example of project demonstrating MVVM architecture pattern.
