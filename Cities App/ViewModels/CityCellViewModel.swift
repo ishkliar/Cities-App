@@ -44,7 +44,7 @@ final class CityCellViewModel: CityCellViewModelProtocol {
         if let image = image {
             completion(image)
         } else {
-            let task = URLSession.shared.dataTask(with: city.image) { data, _, _ in
+            let task = URLSession.shared.dataTask(with: city.image) { [weak self] data, _, _ in
                 guard let data = data, let image = UIImage(data: data) else {
                     DispatchQueue.main.async {
                         completion(nil)
@@ -56,7 +56,7 @@ final class CityCellViewModel: CityCellViewModelProtocol {
                     completion(image)
                 }
 
-                self.image = image
+                self?.image = image
             }
 
             self.task = task
@@ -66,5 +66,6 @@ final class CityCellViewModel: CityCellViewModelProtocol {
 
     func cancelRetrieving() {
         task?.cancel()
+        task = nil
     }
 }
