@@ -34,11 +34,13 @@ class CityDetailsViewController: BaseViewController, StoryboardInstantiatable, A
         viewModel.fetchData()
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        viewModel.finish()
+    override func didMove(toParent parent: UIViewController?) {
+        super.didMove(toParent: parent)
+        if parent == nil {
+            viewModel.finish()
+        }
     }
-
+    
     // MARK: - Private methods
 
     private func updateUI() {
