@@ -76,7 +76,8 @@ extension CityListViewController: UITableViewDataSource {
         cell.imageView?.image = nil
 
         cellViewModel.retrieveImage { image in
-            cell.thumbnailImageView.image = image
+            let cell = tableView.cellForRow(at: indexPath) as? CityCell
+            cell?.thumbnailImageView.image = image
         }
 
         return cell

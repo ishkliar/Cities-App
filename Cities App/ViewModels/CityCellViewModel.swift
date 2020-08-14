@@ -26,8 +26,8 @@ final class CityCellViewModel: CityCellViewModelProtocol {
 
     // MARK: - Properties
 
-    var title: String { city.name }
     var id: String { city.id }
+    var title: String { city.name }
     var subtitle: String { city.country }
     var isFavorite: Bool
 
@@ -42,7 +42,9 @@ final class CityCellViewModel: CityCellViewModelProtocol {
 
     func retrieveImage(completion: @escaping (UIImage?) -> Void) {
         if let image = image {
-            completion(image)
+            DispatchQueue.main.async {
+                completion(image)
+            }
         } else {
             let task = URLSession.shared.dataTask(with: city.image) { [weak self] data, _, _ in
                 guard let data = data, let image = UIImage(data: data) else {
